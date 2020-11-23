@@ -1,0 +1,27 @@
+{
+    "user_id":2,
+    "first_name":"Aprilette",
+    "last_name":"Carrabot",
+    "address":"0 Golf View Parkway",
+    "email":"acarrabot1@list-manage.com",
+    "work_exp":{
+        "length":7,
+        "role":"Sales",
+        "location":"Shangsanji",
+        "company":{
+            "name":"Skilith",
+            "industry":"Capital Goods"
+                  }
+               },
+    "education":{
+        "institution":"University of Malawi",
+        "GPA":3.2,
+        "major":"Technology",
+        "grad_date":"12/6/2016"
+                },
+    "project":{
+        "name":"Bigtax",
+        "description":"Vestibulum sed magna at nunc commodo placerat. Praesent blandit."
+              },
+    "skills":["Git","Apache","MongoDB","Python"]
+}

@@ -1,0 +1,28 @@
+Query One:
+db.users.find({"first_name":"Tito"})
+Finds all info about users with first name Tito, in this case there are two.
+
+Query Two (Aggregation):
+// Why does the first field have to be _id? Ask later
+// Sort without using .find()?
+db.users.aggregate([{$group : {_id : "$work_exp.role", num_people : {$sum : 1}}}])
+Returns the total sum number of people working for every work position across all users.
+
+
+Query Three (More than one expression logically connected):
+db.users.find({$and:[{"education.GPA":{$gte:3.5}},{"skills": "Python"}]}).pretty()
+checks for two sub-expressions one using comparison operators and one querying arrays for a specific element.
+Returns info on users with GPA >= 3.5 and that can use Python, useful for employers to search for.
+Structures the information in a more readable format using .pretty()
+
+Query Four (Counting documents with a condition):
+db.users.find({"work_exp.length":{$gte:6}}).count()
+Returns the number of users that have worked for six years or longer.
+
+Query Five (Updating document):
+db.users.update({'address':'9420 Anzinger Street'},{$set:{'address':'The White House'}})
+
+Mongo returns:
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+User named "Candis Studders" had her address reset to the white house.
+(The exported json reflects the db before this change)

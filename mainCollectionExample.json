@@ -1,0 +1,28 @@
+{
+    "user_id":1,
+    "first_name":"Marthe",
+    "last_name":"Elverstone",
+    "address":"738 Green Ridge Center",
+    "email":"melverstone0@irs.gov",
+    "work_exp":{
+        "length":7,
+        "role":"Support",
+        "location":"Guyi",
+        "company":{
+            "name":"Voonix",
+            "industry":"Basic Industries"
+                  }
+               },
+    "education":{
+        "institution":"Universidad de La Salle",
+        "GPA":4.0,
+        "major":"Basic Industries",
+        "grad_date":"2/22/2018"
+                },
+    "project":{
+        "name":"Sonair",
+        "description":"Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo."
+              },
+    "skills":["Linux","CSS","MongoDB","Git"]
+}
+
