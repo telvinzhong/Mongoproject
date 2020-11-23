@@ -49,8 +49,8 @@ function myDB() {
         { _id: ObjectId(user._id) },
         {
           $set: {
-            Name: user.Name,
-            Email: +user.Email,
+            Name: user.first_name,
+            Email: user.email,
           },
         }
       );
@@ -59,7 +59,7 @@ function myDB() {
     }
   };
 
-  myDB.deleteuser = async function (user) {
+  myDB.deleteUser = async function (user) {
     const client = MongoClient(uri, { useUnifiedTopology: true });
     try {
       await client.connect();
@@ -67,6 +67,7 @@ function myDB() {
       const col = db.collection(colName);
 
       return await col.deleteOne({ _id: ObjectId(user._id) });
+      console.log("delete run");
     } finally {
       client.close();
     }

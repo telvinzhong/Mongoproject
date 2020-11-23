@@ -9,15 +9,17 @@ router.get("/", function (req, res, next) {
 
 router.get("/users", async (req, res) => {
   const page = req.query.page || 1;
-  console.log("/users", page);
+  // console.log("/users", page);
+
 
   try {
     const users = await myDB.getUsers(page);
-    console.log("got users", users);
+    // console.log("got users", users);
     res.render("users", {
       users: users,
       // err: req.session.err,
       // msg: req.session.msg,
+    
     });
   } catch (err) {
     console.log("got error", err);
