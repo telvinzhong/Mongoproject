@@ -7,6 +7,9 @@ the application should be running on http://localhost:3000 from any browser.
 This assumes that mondoDB/mongoCompass is running on default localhost:27017.
 Otherwise, make sure that your mongo path is added to your environment.
 
+db name: proj2
+collection name: users
+
 ----------------------------------------------------------------
 To import this database:
 
