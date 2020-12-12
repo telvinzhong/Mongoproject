@@ -49,8 +49,8 @@ function myDB() {
         { _id: ObjectId(user._id) },
         {
           $set: {
-            Name: user.first_name,
-            Email: user.email,
+            first_name: user.first_name,
+            email: user.email,
           },
         }
       );
